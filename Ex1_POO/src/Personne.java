@@ -1,6 +1,6 @@
 public class Personne {
-    String nom, prenom, dateDeNaissance;
-    Compte compte;
+    private String nom, prenom, dateDeNaissance;
+    private Compte compte;
 
     //Constructor
     public Personne() {

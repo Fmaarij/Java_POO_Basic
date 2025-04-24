@@ -12,15 +12,15 @@ public class Main {
         System.out.println("***** Classe personne, Compte Et Adresse *****");
         //Création de la personne Samir
         Personne samir = new Personne();
-        samir.prenom = "Samir";
-        samir.nom = "Claudy";
-        samir.dateDeNaissance = "24/04/1999";
+        samir.setPrenom("Samir");
+        samir.setNom("Claudy");
+        samir.setDateDeNaissance( "24/04/1999");
         //Fin de la création de la personne Samir
         //Création de la personne Jean
         Personne jean = new Personne();
-        jean.prenom = "Jean";
-        jean.nom = "Broustin";
-        jean.dateDeNaissance = "10/09/2001";
+        jean.setPrenom("Jean");
+        jean.setNom("Broustin");
+        jean.setDateDeNaissance( "10/09/2001");
         //Fin de la création de la personne Jean
 
         //Création de compte numéro 1
@@ -29,8 +29,8 @@ public class Main {
         String passWord = "";
 
         Compte compteSamir = new Compte();
-        compteSamir.login = samir.getNom() + "_" + samir.getPrenom();
-        compteSamir.motDePasse = samir.getPrenom() + "." + random.nextInt(1000);
+        compteSamir.setLogin(samir.getNom() + "_" + samir.getPrenom());
+        compteSamir.setMotDePasse(samir.getPrenom() + "." + random.nextInt(1000));
 
         /* selectioner un passsword depuis des lettre d'une tableau
         for(int i =0; i<alphabet.length; i++ ){
@@ -44,37 +44,41 @@ public class Main {
 
         //Création de compte numéro 2
         Compte compteJean = new Compte();
-        compteJean.login = jean.getNom() + "_" + jean.getPrenom();
-        compteJean.motDePasse = jean.getPrenom() + "." + random.nextInt(1000);
+        compteJean.setLogin(jean.getNom() + "_" + jean.getPrenom());
+        compteJean.setMotDePasse(jean.getPrenom() + "." + random.nextInt(1000));
         //Fin de la création de compte numéro 2
 
         //Création de l'adresse numéro 1
         Adresse adresse1 = new Adresse();
-        adresse1.nomDeLaRue = "Rue berger";
-        adresse1.numeroRue = "24";
-        adresse1.codePostal = "1070";
-        adresse1.nomDeLaCommune = "Anderlecht";
-        adresse1.ville = "Bruxelles";
-        adresse1.pays = "Belgique";
+        adresse1.setNomDeLaRue("Rue berger");
+        adresse1.setNumeroRue("24");
+        adresse1.setCodePostal("1070");
+        adresse1.setNomDeLaCommune("Anderlecht");
+        adresse1.setNomDeLaCommune( "Bruxelles");
+        adresse1.setPays("Belgique");
         //End of création de l'adresse numéro 1
         //Création de l'adresse numéro 2
         Adresse adresse2 = new Adresse();
-        adresse2.nomDeLaRue = "Avenue de bouchon";
-        adresse2.numeroRue = "137";
-        adresse2.codePostal = "1050";
-        adresse2.nomDeLaCommune = "Ixelles";
-        adresse2.ville = "Bruxelles";
-        adresse2.pays = "Belgique";
+        adresse2.setNomDeLaRue("Avenue de bouchon");
+        adresse2.setNumeroRue("137");
+        adresse2.setCodePostal("1050");
+        adresse2.setNomDeLaCommune("Ixelles");
+        adresse2.setVille("Bruxelles");
+        adresse2.setPays("Belgique");
         //End of création de l'adresse numéro 2
+
+        //Attribuer une adresse à une personne
+        //End of attribuer une adresse à une personne
+
 
 
         //Affichage
-        System.out.println("***** " + samir.nom + " voil votre login et mot de passe ***** ");
-        System.out.println("Login : " + compteSamir.login);
-        System.out.println("Mot de passe : " + compteSamir.motDePasse);
-        System.out.println("***** " + jean.nom + " voil votre login et mot de passe ***** ");
-        System.out.println("Login : " + compteJean.login);
-        System.out.println("Mot de passe : " + compteJean.motDePasse);
+        System.out.println("***** " + samir.getNom() + " voil votre login et mot de passe ***** ");
+        System.out.println("Login : " + compteSamir.getLogin());
+        System.out.println("Mot de passe : " + compteSamir.getMotDePasse());
+        System.out.println("***** " + jean.getNom() + " voil votre login et mot de passe ***** ");
+        System.out.println("Login : " + compteJean.getLogin());
+        System.out.println("Mot de passe : " + compteJean.getMotDePasse());
 
 
         System.out.println(samir.affichagePersonne());

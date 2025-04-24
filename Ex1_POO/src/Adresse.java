@@ -2,7 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Adresse {
-    String nomDeLaRue, numeroRue, codePostal, nomDeLaCommune, ville, pays;
+    private  String nomDeLaRue, numeroRue, codePostal, nomDeLaCommune, ville, pays;
     Set<Personne> personneSet = new HashSet<>();
 
     //constructor

@@ -1,5 +1,5 @@
 public class Compte {
-    String login, motDePasse;
+   private String login, motDePasse;
 
     //constructor
     public Compte() {
